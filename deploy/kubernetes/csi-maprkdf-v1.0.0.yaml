@@ -274,6 +274,9 @@ metadata:
   name: csi-controller-kdf
   namespace: mapr-csi
 spec:
+  selector:
+    matchLabels:
+      app: csi-controller-kdf
   serviceName: "kdf-provisioner-svc"
   replicas: 1
   template:
